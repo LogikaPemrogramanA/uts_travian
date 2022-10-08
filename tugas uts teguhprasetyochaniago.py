@@ -18,11 +18,12 @@ viking_agility = [35, 55]
 print('Ketik log_in() untuk mulai permainan')
 #Login
 def log_in() :
-    id_1 = input('Create New Username:')
-    password_1 = input('Create New Password:')
-    print('\n NEW ACCOUNT CREATED')
+    id_1 = input('Please enter a new username:')
+    password_1 = input('Please enter a new password:')
+    print('\n Account has been registered succesfully')
     id_2 = input('\nLogin to Your Acoount:')
     password_2 = input('Your Password?:')
+
 #pilih puak
     if id_2 == id_1 and password_2 == password_1 :
         print('status_login = active')
@@ -38,14 +39,14 @@ def log_in() :
             banyak_tentara_1 = input('How many Imperians? :')
             banyak_tentara_2 = input('How many Equites Cesaeris? :')
             if int(banyak_tentara_1) > 100 or int(banyak_tentara_2) > 100 :
-                print('Too much soldier you can deploy!')
+                print('Sorry, you are unable to deploy that many troops!')
                 return log_in()
             else :
                 total_attack = banyak_tentara_1 * (roma_attack[0] + (0.75 * roma_agility[0])) +  banyak_tentara_2 * (roma_attack[1] + (0.75 * roma_agility[1]))
                 print(total_attack)
-                print('Enemy choosing puak...')
+                print('The enemy picking...')
                 choose_enemy = random.choice(puak_trav)
-                print('Enemy has chosen' , choose_enemy)
+                print('The enemy is ready' , choose_enemy)
                 if choose_enemy == puak_trav[0] :
                     print('Imperians')
                     print('Attack : 80, Defend : 70, Agility : 30')
@@ -57,12 +58,12 @@ def log_in() :
                     print('Enemy Equites Cesaeris : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (roma_defend[0] + (0.75 * roma_agility[0])) +  banyak_enemy_2 * (roma_defend[1] + (0.75 * roma_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your oppponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Romans')
                             print('TROOPS')
@@ -72,7 +73,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
@@ -85,12 +86,12 @@ def log_in() :
                     print('Enemy Theutaes Thunder : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (galia_defend[0] + (0.75 * galia_agility[0])) +  banyak_enemy_2 * (galia_defend[1] + (0.75 * galia_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
@@ -100,7 +101,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 else :
                     print('Clubswinger')
@@ -113,12 +114,12 @@ def log_in() :
                     print('Enemy Teutonic Knight : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (viking_defend[0] + (0.75 * viking_agility[0])) +  banyak_enemy_2 * (viking_defend[1] + (0.75 * viking_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your oppponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
@@ -128,7 +129,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
 
         elif choose_puak == puak_trav[1] :
@@ -144,9 +145,9 @@ def log_in() :
             else :
                 total_attack = banyak_tentara_1 * (galia_attack[0] + (0.75 * galia_agility[0])) +  banyak_tentara_2 * (galia_attack[1] + (0.75 * galia_agility[1]))
                 print(total_attack)
-                print('Enemy choosing puak...')
+                print('The enemy is picking...')
                 choose_enemy = random.choice(puak_trav)
-                print('Enemy has chosen' , choose_enemy)
+                print('The enemy is ready' , choose_enemy)
                 if choose_enemy == puak_trav[0] :
                     print('Imperians')
                     print('Attack : 80, Defend : 70, Agility : 30')
@@ -158,12 +159,12 @@ def log_in() :
                     print('Enemy Equites Cesaeris : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (roma_defend[0] + (0.75 * roma_agility[0])) +  banyak_enemy_2 * (roma_defend[1] + (0.75 * roma_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
@@ -173,7 +174,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
@@ -186,12 +187,12 @@ def log_in() :
                     print('Enemy Theutaes Thunder : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (galia_defend[0] + (0.75 * galia_agility[0])) +  banyak_enemy_2 * (galia_defend[1] + (0.75 * galia_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
@@ -201,7 +202,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 else  :
                     print('Clubswinger')
@@ -214,12 +215,12 @@ def log_in() :
                     print('Enemy Teutonic Knight : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (viking_defend[0] + (0.75 * viking_agility[0])) +  banyak_enemy_2 * (viking_defend[1] + (0.75 * viking_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
@@ -229,7 +230,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
         
         else : 
@@ -245,9 +246,9 @@ def log_in() :
             else :
                 total_attack = banyak_tentara_1 * (viking_attack[0] + (0.75 * viking_agility[0])) +  banyak_tentara_2 * (viking_attack[1] + (0.75 * viking_agility[1]))
                 print(total_attack)
-                print('Enemy choosing puak...')
+                print('The enemy is picking...')
                 choose_enemy = random.choice(puak_trav)
-                print('Enemy has chosen' , choose_enemy)
+                print('The enemy is ready' , choose_enemy)
                 if choose_enemy == puak_trav[0] :
                     print('Imperians')
                     print('Attack : 80, Defend : 70, Agility : 30')
@@ -259,12 +260,12 @@ def log_in() :
                     print('Enemy Equites Cesaeris : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (roma_defend[0] + (0.75 * roma_agility[0])) +  banyak_enemy_2 * (roma_defend[1] + (0.75 * roma_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
@@ -274,7 +275,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
@@ -287,12 +288,12 @@ def log_in() :
                     print('Enemy Theutaes Thunder : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (galia_defend[0] + (0.75 * galia_agility[0])) +  banyak_enemy_2 * (galia_defend[1] + (0.75 * galia_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
@@ -302,7 +303,7 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()
                 else  :
                     print('Clubswinger')
@@ -315,12 +316,12 @@ def log_in() :
                     print('Enemy Teutonic Knight : ', banyak_enemy_2)
                     total_defend = banyak_enemy_1 * (viking_defend[0] + (0.75 * viking_agility[0])) +  banyak_enemy_2 * (viking_defend[1] + (0.75 * viking_agility[1]))
                     print('Enemy total defend : ', total_defend)
-                    print('To attack type SERANG')
+                    print('Type Attack to fight your opponent')
                     serang = input()
-                    if serang == 'SERANG' :
+                    if serang == 'Attack' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('YOU WIN!')
+                            print('VICTORY!')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
@@ -330,21 +331,21 @@ def log_in() :
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('YOU LOSE!')
+                            print('DEFEAT!')
                             return log_in()        
     else : 
         print('Login Failed, Please Check Your Id or Password!')
-
+        
 #CONTOH HASIL OUTPUT DARI RUN CODE :
 
-#Create New Username: adzy
-#Create New Password: fuad
+#Create New Username: Xemonis
+#Create New Password: lightningmcqueen
 # NEW ACCOUNT CREATED
-#Login to Your Acoount: adzy
-#Your Password?: fuad
+#Login to Your Acoount: Xemonis
+#Your Password?: lightningmcqueen
 #status_login = active
 
-#Welcome back, adzy !
+#Welcome back, Xemonis !
 #Choose your Puak! : 
 
 #Romans Galia Vikings
@@ -356,7 +357,7 @@ def log_in() :
 #How many Clubswinger? : 80
 #How many Teutonic Knight? : 7
 #9088.75
-#Enemy choosing puak...
+#The enemy is picking...
 #Enemy has chosen Romans
 #Imperians
 #Attack : 80, Defend : 70, Agility : 30
@@ -365,10 +366,10 @@ def log_in() :
 #Enemy Imperians :  16
 #Enemy Equites Cesaeris :  43
 #Enemy total defend :  6425.0
-#To attack type SERANG
-# SERANG
-#YOU WIN!
-#Username : adzy
+#Type Attack to fight your opponent
+# Attack
+#VICTORY!
+#Username : Xemonis
 #Puak : Vikings
 #TROOPS
 #Clubswinger :  80
