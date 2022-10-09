@@ -35,8 +35,8 @@ def Start_game() :
             print('Attack : 80, Defend : 70, Agility : 30')
             print('Equites Cesaeris')
             print('Attack : 125, Defend : 85, Agility : 40')
-            banyak_army_1 = input('How many Imperians? :')
-            banyak_army_2 = input('How many Equites Cesaeris? :')
+            banyak_prajurit_1 = input('How many Imperians? :')
+            banyak_prajurit_2 = input('How many Equites Cesaeris? :')
             if int(banyak_prajurit_1) > 100 or int(banyak_prajurit_2) > 100 :
                 print('Too much soldier you can deploy!')
                 return Start_game()
