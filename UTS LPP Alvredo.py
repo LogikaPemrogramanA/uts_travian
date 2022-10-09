@@ -338,10 +338,10 @@ def lets_go() :
 #CONTOH HASIL OUTPUT DARI RUN CODE :
 
 #Create New Username: doxped
-#Create New Password: alvredo
+#Create New Password: alvredo12
 # NEW ACCOUNT CREATED
 #Login to Your Acoount: doxped
-#Your Password?: alvredo
+#Your Password?: alvredo12
 #status_login = active
 
 #Welcome back, doxped !
