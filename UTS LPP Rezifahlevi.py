@@ -15,9 +15,9 @@ viking_attack = [75, 100]
 viking_defend = [75, 100]
 viking_agility = [35, 55]
 
-print('Ketik Mulai_game() untuk mulai permainan')
+print('Ketik Mulai_permainannya() untuk mulai permainan')
 #Login
-def Mulai_game() :
+def Mulai_permainannya() :
     id_1 = input('Create New Username:')
     password_1 = input('Create New Password:')
     print('\n NEW ACCOUNT CREATED')
@@ -35,13 +35,13 @@ def Mulai_game() :
             print('Attack : 80, Defend : 70, Agility : 30')
             print('Equites Cesaeris')
             print('Attack : 125, Defend : 85, Agility : 40')
-            banyak_army_1 = input('How many Imperians? :')
-            banyak_army_2 = input('How many Equites Cesaeris? :')
-            if int(banyak_army_1) > 100 or int(banyak_army_2) > 100 :
+            banyak_fighter_1 = input('How many Imperians? :')
+            banyak_fighter_2 = input('How many Equites Cesaeris? :')
+            if int(banyak_fighter_1) > 100 or int(banyak_fighter_2) > 100 :
                 print('Too much soldier you can deploy!')
-                return Mulai_game()
+                return Mulai_permainannya()
             else :
-                total_attack = banyak_army_1 * (roma_attack[0] + (0.75 * roma_agility[0])) +  banyak_army_2 * (roma_attack[1] + (0.75 * roma_agility[1]))
+                total_attack = banyak_fighter_1 * (roma_attack[0] + (0.75 * roma_agility[0])) +  banyak_fighter_2 * (roma_attack[1] + (0.75 * roma_agility[1]))
                 print(total_attack)
                 print('Enemy choosing puak...')
                 choose_enemy = random.choice(puak_trav)
@@ -62,18 +62,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Romans')
                             print('TROOPS')
-                            print('Imperian : ', banyak_army_1)
-                            print('Equites Cecaris : ', banyak_army_2)
+                            print('Imperian : ', banyak_fighter_1)
+                            print('Equites Cecaris : ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
                     print('Attack : 65, Defend : 75, Agility : 40')
@@ -90,18 +90,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
-                            print('Swordman : ', banyak_army_1)
-                            print('Theutaes Thunder: ', banyak_army_2)
+                            print('Swordman : ', banyak_fighter_1)
+                            print('Theutaes Thunder: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
                 else :
                     print('Clubswinger')
                     print('Attack : 75, Defend : 75, Agility : 35')
@@ -118,31 +118,31 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
-                            print('Clubswinger : ', banyak_army_1)
-                            print('Teutonic Knight: ', banyak_army_2)
+                            print('Clubswinger : ', banyak_fighter_1)
+                            print('Teutonic Knight: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
 
         elif choose_puak == puak_trav[1] :
             print('Swordman')
             print('Attack : 65, Defend : 75, Agility : 40')
             print('Theutaes Thunder')
             print('Attack : 95, Defend : 85, Agility : 60')
-            banyak_army_1 = input('How many Swordman? :')
-            banyak_army_2 = input('How many Theutaes Thunder? :')
-            if int(banyak_army_1) > 100 or int(banyak_army_2) > 100 :
+            banyak_fighter_1 = input('How many Swordman? :')
+            banyak_fighter_2 = input('How many Theutaes Thunder? :')
+            if int(banyak_fighter_1) > 100 or int(banyak_fighter_2) > 100 :
                 print('Too much soldier you can deploy!')
-                return Mulai_game()
+                return Mulai_permainannya()
             else :
-                total_attack = banyak_army_1 * (galia_attack[0] + (0.75 * galia_agility[0])) +  banyak_army_2 * (galia_attack[1] + (0.75 * galia_agility[1]))
+                total_attack = banyak_fighter_1 * (galia_attack[0] + (0.75 * galia_agility[0])) +  banyak_fighter_2 * (galia_attack[1] + (0.75 * galia_agility[1]))
                 print(total_attack)
                 print('Enemy choosing puak...')
                 choose_enemy = random.choice(puak_trav)
@@ -163,18 +163,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
-                            print('Swordman : ', banyak_army_1)
-                            print('Theutaes Thunder : ', banyak_army_2)
+                            print('Swordman : ', banyak_fighter_1)
+                            print('Theutaes Thunder : ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
                     print('Attack : 65, Defend : 75, Agility : 40')
@@ -191,18 +191,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
-                            print('Swordman : ', banyak_army_1)
-                            print('Theutaes Thunder: ', banyak_army_2)
+                            print('Swordman : ', banyak_fighter_1)
+                            print('Theutaes Thunder: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
                 else  :
                     print('Clubswinger')
                     print('Attack : 75, Defend : 75, Agility : 35')
@@ -219,31 +219,31 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
-                            print('Swordman : ', banyak_army_1)
-                            print('Theutaes Thunder: ', banyak_army_2)
+                            print('Swordman : ', banyak_fighter_1)
+                            print('Theutaes Thunder: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
         
         else : 
             print('Clubswinger')
             print('Attack : 75, Defend : 75, Agility : 35')
             print('Teutonic Knight')
             print('Attack : 100, Defend : 100, Agility : 55')
-            banyak_army_1 = input('How many Clubswinger? :')
-            banyak_army_2 = input('How many Teutonic Knight? :')
-            if int(banyak_army_1) > 100 or int(banyak_army_2) > 100 :
+            banyak_fighter_1 = input('How many Clubswinger? :')
+            banyak_fighter_2 = input('How many Teutonic Knight? :')
+            if int(banyak_fighter_1) > 100 or int(banyak_fighter_2) > 100 :
                 print('Too much soldier you can deploy!')
-                return Mulai_game()
+                return Mulai_permainannya()
             else :
-                total_attack = banyak_army_1 * (viking_attack[0] + (0.75 * viking_agility[0])) +  banyak_army_2 * (viking_attack[1] + (0.75 * viking_agility[1]))
+                total_attack = banyak_fighter_1 * (viking_attack[0] + (0.75 * viking_agility[0])) +  banyak_fighter_2 * (viking_attack[1] + (0.75 * viking_agility[1]))
                 print(total_attack)
                 print('Enemy choosing puak...')
                 choose_enemy = random.choice(puak_trav)
@@ -264,17 +264,17 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
-                            print('Clubswinger : ', banyak_army_1)
-                            print('Teutonic Knight : ', banyak_army_2)
+                            print('Clubswinger : ', banyak_fighter_1)
+                            print('Teutonic Knight : ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
+                            print('loser')
                             return Mulai_game()
                 elif choose_enemy == puak_trav[1] :
                     print('Swordman')
@@ -292,18 +292,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
-                            print('Clubswinger : ', banyak_army_1)
-                            print('Teutonic Knight: ', banyak_army_2)
+                            print('Clubswinger : ', banyak_fighter_1)
+                            print('Teutonic Knight: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()
+                            print('loser')
+                            return Mulai_permainannya()
                 else  :
                     print('Clubswinger')
                     print('Attack : 75, Defend : 75, Agility : 35')
@@ -320,18 +320,18 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('impressed')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
-                            print('Clubswinger : ', banyak_army_1)
-                            print('Teutonic Knight: ', banyak_army_2)
+                            print('Clubswinger : ', banyak_fighter_1)
+                            print('Teutonic Knight: ', banyak_fighter_2)
                             print('Total attack : ', total_attack)
                             print('Total defend : ', total_defend)
                             print('Total kemenangan : ', round(total_attack/total_defend))
                         else :
-                            print('DEFEAT')
-                            return Mulai_game()        
+                            print('loser')
+                            return Mulai_permainannya()        
     else : 
         print('Login Failed, Please Check Your Id or Password!')
 
@@ -356,18 +356,18 @@ def Mulai_game() :
 #How many Clubswinger? : 80
 #How many Teutonic Knight? : 7
 #9088.75
-#Enemy choosing puak...
-#Enemy has chosen Romans
+#fighter choosing puak...
+#fighter has chosen Romans
 #Imperians
 #Attack : 80, Defend : 70, Agility : 30
 #Equites Cesaeris
 #Attack : 125, Defend : 85, Agility : 40
-#Enemy Imperians :  16
-#Enemy Equites Cesaeris :  43
-#Enemy total defend :  6425.0
+#fighter Imperians :  16
+#fighter Equites Cesaeris :  43
+#fighter total defend :  6425.0
 #To attack type SERANG
 # SERANG
-#CONGRATULATIONS
+#impressed
 #Username : Rezi
 #Puak : Vikings
 #TROOPS
