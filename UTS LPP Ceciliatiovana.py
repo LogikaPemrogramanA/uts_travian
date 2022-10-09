@@ -62,7 +62,7 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('CONGRATS')
                             print('Username :', id_1)
                             print('Puak : Romans')
                             print('TROOPS')
@@ -90,7 +90,7 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATs')
+                            print('CONGRATS')
                             print('Username :', id_1)
                             print('Puak : Galia')
                             print('TROOPS')
@@ -241,7 +241,7 @@ def Mulai_game() :
             banyak_army_2 = input('How many Teutonic Knight? :')
             if int(banyak_army_1) > 100 or int(banyak_army_2) > 100 :
                 print('Too much soldier you can deploy!')
-                return Mulai_game()
+                return Start_game()
             else :
                 total_attack = banyak_army_1 * (viking_attack[0] + (0.75 * viking_agility[0])) +  banyak_army_2 * (viking_attack[1] + (0.75 * viking_agility[1]))
                 print(total_attack)
@@ -320,7 +320,7 @@ def Mulai_game() :
                     if serang == 'SERANG' :
                         pemenang = total_attack - total_defend
                         if pemenang > 0 :
-                            print('CONGRATULATIONS')
+                            print('CONGRATS')
                             print('Username :', id_1)
                             print('Puak : Vikings')
                             print('TROOPS')
@@ -340,8 +340,8 @@ def Mulai_game() :
 #Create New Username: Vana
 #Create New Password: CeciliaTiovana
 # NEW ACCOUNT CREATED
-#Login to Your Acoount: Vana
-#Your Password?: Ceciliatiovana
+#Login to Your Acoount: Ceciliatiovana
+#Your Password?: Vana
 #status_login = active
 
 #Welcome back, Vana !
@@ -367,7 +367,7 @@ def Mulai_game() :
 #Enemy total defend :  6425.0
 #To attack type SERANG
 # SERANG
-#CONGRATULATIONS
+#CONGRATS
 #Username : Vana
 #Puak : Vikings
 #TROOPS
