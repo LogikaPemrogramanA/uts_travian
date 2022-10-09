@@ -348,18 +348,18 @@ def log_in() :
         
 #CONTOH HASIL OUTPUT DARI RUN CODE :
 
-#Create New Username: rossqrt
+#Create New Username: rosie
 #Create New Password: fullsun00
-# NEW ACCOUNT CREATED
-#Login to Your Acoount: rossqrt
+#NEW ACCOUNT CREATED
+#Login to Your Acoount: rosie
 #Your Password?: fullsun00
 #status_login = active
 
-#Welcome back, rossqrt !
+#Welcome back, rosie !
 #Choose your Puak! : 
 
 #Romans Galia Vikings
-# Vikings
+#Vikings
 #Clubswinger
 #Attack : 75, Defend : 75, Agility : 35
 #Teutonic Knight
@@ -377,9 +377,9 @@ def log_in() :
 #Enemy Equites Cesaeris :  43
 #Enemy total defend :  6425.0
 #To attack type SERANG
-# SERANG
+#SERANG
 #YOU WIN!
-#Username : rossqrt
+#Username : rosie
 #Puak : Vikings
 #TROOPS
 #Clubswinger :  80
@@ -387,5 +387,3 @@ def log_in() :
 #Total attack :  9088.75
 #Total defend :  6425.0
 #Total kemenangan :  1
-
-
