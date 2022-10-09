@@ -15,7 +15,7 @@ viking_attack = [75, 100]
 viking_defend = [75, 100]
 viking_agility = [35, 55]
 
-print('Ketik log_in() untuk mulai permainan')
+print('Ketik selamat_datang() untuk mulai permainan')
 #Login
 def selamat_datang() :
     id_1 = input('Create New Username:')
