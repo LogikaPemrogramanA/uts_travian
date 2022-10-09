@@ -337,14 +337,14 @@ def Mulai_game() :
 
 #CONTOH HASIL OUTPUT DARI RUN CODE :
 
-#Create New Username: Fris
-#Create New Password: GibranFA
+#Create New Username: Vana
+#Create New Password: CeciliaTiovana
 # NEW ACCOUNT CREATED
-#Login to Your Acoount: Fris
-#Your Password?: GibranFA
+#Login to Your Acoount: Vana
+#Your Password?: Ceciliatiovana
 #status_login = active
 
-#Welcome back, Fris !
+#Welcome back, Vana !
 #Choose your Puak! : 
 
 #Romans Galia Vikings
@@ -368,7 +368,7 @@ def Mulai_game() :
 #To attack type SERANG
 # SERANG
 #CONGRATULATIONS
-#Username : Fris
+#Username : Vana
 #Puak : Vikings
 #TROOPS
 #Clubswinger :  80
