@@ -339,7 +339,7 @@ def start_game() :
 
 #Create New Username: Bkaniaep
 #Create New Password: kaniabep
-# NEW ACCOUNT CREATED
+#NEW ACCOUNT CREATED
 #Login to Your Acoount: Bkaniaep
 #Your Password?: kaniabep
 #status_login = active
@@ -348,7 +348,7 @@ def start_game() :
 #Choose your Puak! :  
 
 #Romans Galia Vikings
-# Vikings
+#Vikings
 #Clubswinger
 #Attack : 75, Defend : 75, Agility : 35
 #Teutonic Knight
@@ -366,7 +366,7 @@ def start_game() :
 #Enemy Equites Cesaeris :  43
 #Enemy total defend :  6425.0
 #To attack type SERANG
-# SERANG
+#SERANG
 #YOU WIN!
 #Username : Bkaniaep
 #Puak : Vikings
