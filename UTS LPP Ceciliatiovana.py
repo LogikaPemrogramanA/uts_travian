@@ -17,7 +17,7 @@ viking_agility = [35, 55]
 
 print('Ketik start_game() untuk mulai permainan')
 #Login
-def Mulai_game() :
+def Start_game() :
     id_1 = input('Create New Username:')
     password_1 = input('Create New Password:')
     print('\n NEW ACCOUNT CREATED')
